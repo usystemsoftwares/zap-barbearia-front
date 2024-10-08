@@ -8,12 +8,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      width: {
+        'container': 'min(90%,70rem)',
+        'lg-container': 'min(90%,84.375rem)'
+      },
       colors: {
         "cyan": "#05847E",
         "primary-green": "#4DD080",
         "dark-green": "#134D37",
         "blur-green": "#41E0AF",
-        "text-green": "#143637",
+        "font-green": "#143637",
         "primary-golden": "#D3B71B",
         "secondary-golden": "#C65A17",
         "light-gray": "#919393",
@@ -22,6 +26,10 @@ const config: Config = {
         "secondary-white": "#EFF1F7",
         "white-bg": "#FCF5EB"
       },
+      fontFamily: {
+        figtree: ["var(--font-figtree)"],
+        matter: ["var(--font-matter)"]
+      }
     },
   },
   plugins: [],
