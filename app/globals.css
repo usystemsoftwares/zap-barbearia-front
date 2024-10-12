@@ -11,3 +11,23 @@ body {
     text-wrap: balance;
   }
 }
+
+.plan-ul>li:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: inherit;
+  mask: conic-gradient(#000 0 0) content-box exclude, conic-gradient(#000 0 0);
+  z-index: -1;
+}
+
+.contract-button:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: inherit;
+  mask: conic-gradient(#000 0 0) content-box exclude, conic-gradient(#000 0 0);
+  z-index: -1;
+}

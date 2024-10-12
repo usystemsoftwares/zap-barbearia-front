@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "plans-bg": "url('/zapbarbearia/plans-details.svg')"
+      },
       width: {
         'container': 'min(90%,70rem)',
         'lg-container': 'min(90%,84.375rem)'
