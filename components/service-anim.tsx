@@ -67,7 +67,7 @@ const ServiceAnim = () => {
             <p className="max-w-[22ch]">Faça pacotes para seus clientes e deixe que nossa IA identifique quem faz parte dos pacotes e gerencie as reservas de forma automática.</p>
           </div>
           <Image
-            className="self-center"
+            className="self-center lg:self-end"
             src={Robot}
             alt="Robô"
           />
