@@ -15,8 +15,8 @@ type Accordion = {
 }
 
 const descVariants = {
-  open: { height: "auto" },
-  collapsed: { height: 0 }
+  open: { opacity: 1, height: "auto" },
+  collapsed: { opacity: 0, height: 0 }
 }
 
 const Accordion = ({ index, title, expanded, setExpanded, description }: Accordion) => {
@@ -31,7 +31,7 @@ const Accordion = ({ index, title, expanded, setExpanded, description }: Accordi
       }>
         <h3 className="flex gap-6 font-medium text-[1.75rem]">
           <Image
-            className={cn("transition-transform", isOpen && "-rotate-180")}
+            className={cn("transition-transform duration-300", isOpen && "-rotate-180")}
             src={FaqDropDownIcon}
             alt="Ícone de expansão"
           /> {title}</h3>
