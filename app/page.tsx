@@ -9,6 +9,7 @@ import PlanSection from "@/components/plan-section";
 import FaqList from "@/components/faq-list";
 import HeadlineAnim from "@/components/headline-anim";
 import ServiceAnim from "@/components/service-anim";
+import CRMAnim from "@/components/crm-anim";
 
 const Home = () => {
   return (
@@ -25,7 +26,7 @@ const Home = () => {
             <div className="absolute -bottom-[25%] md:-bottom-[35%] -left-[50%] w-full h-full [background-image:radial-gradient(circle,#42E0AF_0%,rgba(255,255,255,0)_75%)]"></div>
           </div>
           <section className="w-container mt-16 md:mt-0 relative flex flex-col md:flex-row gap-8 md:justify-between md:items-center mx-auto md:-translate-y-8" id="home">
-            <div className="">
+            <div>
               <HeadlineAnim />
               <Link
                 className="inline-flex shadow-xl shadow-black/20 text-white gap-4 bg-gradient-to-r from-primary-green to-[#04837D] rounded-full py-2 md:py-3 px-6 md:px-8 mt-2 sm:mt-4 md:mt-9 text-3xl md:text-4xl font-semibold"
@@ -39,7 +40,7 @@ const Home = () => {
                 />
               </Link>
             </div>
-            <div className="w-[min(100%,25rem)] relative">
+            <div className="w-[min(100%,25rem)] self-center md:self-auto relative">
               <Image
                 src={WppBg}
                 alt="Whatsapp background"
@@ -49,7 +50,7 @@ const Home = () => {
         </div>
         <section className="w-[min(100%,90rem)] mx-auto relative overflow-hidden">
           <div className="w-container mx-auto text-center pt-24">
-            <div className="absolute top-0 w-[110%] xl:w-full right-1/2 translate-x-1/2">
+            <div className="absolute top-[5%] sm:top-[3.5%] md:top-0 w-[110%] xl:w-full right-1/2 translate-x-1/2">
               <Image
                 className="absolute top-0 w-full"
                 src={RectangleBlur}
@@ -57,7 +58,7 @@ const Home = () => {
                 draggable={false}
               />
             </div>
-            <h2 className="text-5xl xl:text-6xl font-bold mb-5">Preocupe-se somente em cortar</h2>
+            <h2 className="text-5xl xl:text-6xl font-bold mb-5 md:whitespace-nowrap">Preocupe-se somente em cortar</h2>
             <div className="bg-white pt-20 pb-14 px-6 xl:px-14 rounded-[1.25rem] relative">
               <h3 className="text-5xl font-bold max-w-[19ch] mx-auto">Deixe o atendimento com a gente!</h3>
               <p className="mt-12 mb-5 leading-[1.2]">Com o ZapBarbearia, seu tempo é dedicado ao que importa: o atendimento ao cliente. Nossa Inteligência Artificial cuida de todo o resto. Agendamentos, respostas automáticas e lembretes para os clientes, tudo funcionando de maneira autônoma no WhatsApp. Nunca mais perca controle da agenda ou deixe clientes esperando. Você foca no serviço, a tecnologia faz o restante.</p>
@@ -69,16 +70,7 @@ const Home = () => {
         <section className="w-container mx-auto bg-white relative rounded-[1.25rem] px-6 xl:px-14 pb-16 pt-20 crm-section before:bg-gradient-to-b before:from-primary-green">
           <h2 className="text-center text-5xl font-bold mb-12 lg:mb-28">CRM integrado</h2>
           {/* <div className="absolute [background-image:radial-gradient(circle,#2200FF_0%,rgba(255,255,255,0)_75%)] rounded-full right-1/2 translate-x-1/2 w-[25rem] aspect-square"></div> */}
-          <ul className="grid lg:grid-cols-[repeat(30,minmax(0,1fr))] *:h-52 *:bg-[#D9D9D9] leading-[1.2] gap-5 *:px-5 *:rounded-2xl *:pt-5 text-start relative">
-            <li className="lg:[grid-area:span_1/span_17]">
-            </li>
-            <li className="lg:[grid-area:span_1/span_13]">
-            </li>
-            <li className="lg:[grid-area:span_1_/_span_14]">
-            </li>
-            <li className="lg:[grid-area:span_1/span_16]">
-            </li>
-          </ul>
+          <CRMAnim />
         </section>
         <section className="w-lg-container mx-auto my-16" id="step-by-step">
           <h2 className="text-center font-bold text-5xl">Como usar o ZapBarbearia?</h2>

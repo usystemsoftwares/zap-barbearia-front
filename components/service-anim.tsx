@@ -1,60 +1,25 @@
 "use client"
 
-import { motion, useInView } from "framer-motion"
+import { motion } from "framer-motion"
 import Image from "next/image"
 import WppBg from "/public/zapbarbearia/whatsapp-background.webp"
 import CellPhone from "/public/zapbarbearia/cell-phone.svg"
 import Robot from "/public/zapbarbearia/robot.svg"
 import Package from "/public/zapbarbearia/package.svg"
-import React, { ReactNode, useRef } from "react"
+import React from "react"
+import FadeUp from "./fade-up"
 
-const fadeAnimVariants = {
-  hidden: {
-    opacity: 0,
-    scale: "105%",
-    filter: "blur(5px)"
-  },
-  visible: {
-    opacity: 1,
-    scale: "100%",
-    filter: "blur(0px)"
-  }
-}
-
-type FadeUpType = {
-  children: ReactNode;
-  className?: string
-}
-
-const FadeUp = ({
-  children,
-  className
-}: FadeUpType) => {
-  let ref = useRef(null)
-  let isInView = useInView(ref)
-
-  return (
-    <motion.li
-      ref={ref}
-      transition={{
-        duration: .5,
-        delay: .2
-      }}
-      className={className}
-      variants={fadeAnimVariants}
-      initial={false}
-      animate={isInView ? "visible" : "hidden"}
-    >
-      {children}
-    </motion.li>
-  )
-}
 
 const ServiceAnim = () => {
 
   return (
     <motion.ul
       className="*:bg-gradient-to-r grid max-lg:w-[min(35rem,100%)] max-lg:mx-auto lg:grid-cols-[repeat(30,minmax(0,1fr))] leading-[1.2] gap-5 *:px-5 *:rounded-2xl *:pt-5 text-start"
+      initial={false}
+      animate="visible"
+      transition={{
+        staggerChildren: 1
+      }}
     >
       <FadeUp className="from-[#E0FFEF] to-[#F5FBD9] lg:[grid-area:span_1/span_17]">
         <article className="flex flex-col md:flex-row lg:gap-6 justify-between overflow-hidden">
