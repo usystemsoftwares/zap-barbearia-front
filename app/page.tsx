@@ -1,15 +1,14 @@
 import Image from "next/image";
 import Logo from "/public/zapbarbearia/logo.svg"
 import WhiteLogo from "/public/zapbarbearia/white-logo.svg"
-import WppBg from "/public/zapbarbearia/whatsapp-background.webp"
 import ArrowIcon from "/public/zapbarbearia/arrow.svg"
-import RectangleBlur from "/public/zapbarbearia/rectangle-blur.svg"
 import Link from "next/link";
 import PlanSection from "@/components/plan-section";
 import FaqList from "@/components/faq-list";
 import HeadlineAnim from "@/components/headline-anim";
-import ServiceAnim from "@/components/service-anim";
 import CRMAnim from "@/components/crm-anim";
+import ServiceContainer from "@/components/service-container";
+import MessageAnim from "@/components/message-anim";
 
 const Home = () => {
   return (
@@ -29,7 +28,7 @@ const Home = () => {
             <div>
               <HeadlineAnim />
               <Link
-                className="inline-flex shadow-xl shadow-black/20 text-white gap-4 bg-gradient-to-r from-primary-green to-[#04837D] rounded-full py-2 md:py-3 px-6 md:px-8 mt-2 sm:mt-4 md:mt-9 text-3xl md:text-4xl font-semibold"
+                className="inline-flex shadow-xl shadow-black/20 text-white gap-4 bg-[size:400%] [background-image:linear-gradient(90deg,#4DD080,#04837D,#4DD080,#4DD080);] hover:animate-changeGradientAnim hover:scale-110 transition-transform duration-300 rounded-full py-2 md:py-3 px-6 md:px-8 mt-2 sm:mt-4 md:mt-9 text-3xl md:text-4xl font-semibold"
                 href="#plans"
               >
                 Planos
@@ -40,35 +39,14 @@ const Home = () => {
                 />
               </Link>
             </div>
-            <div className="w-[min(100%,25rem)] self-center md:self-auto relative">
-              <Image
-                src={WppBg}
-                alt="Whatsapp background"
-              />
-            </div>
+            <MessageAnim />
           </section>
         </div>
         <section className="w-[min(100%,90rem)] mx-auto relative overflow-hidden">
-          <div className="w-container mx-auto text-center pt-24">
-            <div className="absolute top-[5%] sm:top-[3.5%] md:top-0 w-[110%] xl:w-full right-1/2 translate-x-1/2">
-              <Image
-                className="absolute top-0 w-full"
-                src={RectangleBlur}
-                alt=""
-                draggable={false}
-              />
-            </div>
-            <h2 className="text-5xl xl:text-6xl font-bold mb-5 md:whitespace-nowrap">Preocupe-se somente em cortar</h2>
-            <div className="bg-white pt-20 pb-14 px-6 xl:px-14 rounded-[1.25rem] relative">
-              <h3 className="text-5xl font-bold max-w-[19ch] mx-auto">Deixe o atendimento com a gente!</h3>
-              <p className="mt-12 mb-5 leading-[1.2]">Com o ZapBarbearia, seu tempo é dedicado ao que importa: o atendimento ao cliente. Nossa Inteligência Artificial cuida de todo o resto. Agendamentos, respostas automáticas e lembretes para os clientes, tudo funcionando de maneira autônoma no WhatsApp. Nunca mais perca controle da agenda ou deixe clientes esperando. Você foca no serviço, a tecnologia faz o restante.</p>
-              <ServiceAnim />
-            </div>
-            <p className="text-3xl sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] my-24 leading-[1.1] font-medium text-start">Com o <span className="bg-gradient-to-r from-[#04837D] to-primary-green bg-clip-text text-transparent">ZapBarbearia</span>, o controle de agendamentos, respostas e notificações automáticas para seus clientes é feito de forma inteligente e eficiente. Enquanto você se concentra no que faz de melhor – cortar e cuidar dos cabelos – nossa I.A. organiza sua agenda, garante que seus clientes sejam avisados e evita erros de agendamento. Mais tempo para você, mais satisfação para seus clientes.</p>
-          </div>
+          <ServiceContainer />
         </section>
         <section className="w-container mx-auto bg-white relative rounded-[1.25rem] px-6 xl:px-14 pb-16 pt-20 crm-section before:bg-gradient-to-b before:from-primary-green">
-          <h2 className="text-center text-5xl font-bold mb-12 lg:mb-28">CRM integrado</h2>
+          <h2 className="text-center text-5xl font-bold mb-12 lg:mb-28 relative">CRM integrado</h2>
           {/* <div className="absolute [background-image:radial-gradient(circle,#2200FF_0%,rgba(255,255,255,0)_75%)] rounded-full right-1/2 translate-x-1/2 w-[25rem] aspect-square"></div> */}
           <CRMAnim />
         </section>

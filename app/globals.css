@@ -6,6 +6,11 @@ body {
   min-height: 100vh;
 }
 
+::selection {
+  color: #fff;
+  background-color: #4DD080;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

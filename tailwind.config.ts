@@ -8,6 +8,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        'changeGradientAnim': 'changeGradient 12s linear infinite'
+      },
+      keyframes: {
+        changeGradient: {
+          "0%": {
+            backgroundPosition: "0%"
+          },
+          "100%": {
+            backgroundPosition: "400%"
+          }
+        }
+      },
       backgroundImage: {
         "plans-bg": "url('/zapbarbearia/plans-details.svg')"
       },

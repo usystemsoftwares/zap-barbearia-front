@@ -3,7 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { ReactNode, useRef } from "react";
 
-type FadeUpType = {
+type FadeUpProps = {
   children: ReactNode;
   className?: string
 }
@@ -25,7 +25,7 @@ const fadeAnimVariants = {
 const FadeUp = ({
   children,
   className
-}: FadeUpType) => {
+}: FadeUpProps) => {
   let ref = useRef(null)
   let isInView = useInView(ref, {
     once: true,
