@@ -1,14 +1,12 @@
 import Image from "next/image";
 import Logo from "/public/zapbarbearia/logo.svg"
 import WhiteLogo from "/public/zapbarbearia/white-logo.svg"
-import ArrowIcon from "/public/zapbarbearia/arrow.svg"
 import Link from "next/link";
 import PlanSection from "@/components/plan-section";
 import FaqList from "@/components/faq-list";
-import HeadlineAnim from "@/components/headline-anim";
 import CRMAnim from "@/components/crm-anim";
 import ServiceContainer from "@/components/service-container";
-import MessageAnim from "@/components/message-anim";
+import HomeSection from "@/components/home-section";
 
 const Home = () => {
   return (
@@ -24,23 +22,7 @@ const Home = () => {
           <div className="absolute aspect-square bottom-0 left-0  w-[75%] md:w-[60%] opacity-50">
             <div className="absolute -bottom-[25%] md:-bottom-[35%] -left-[50%] w-full h-full [background-image:radial-gradient(circle,#42E0AF_0%,rgba(255,255,255,0)_75%)]"></div>
           </div>
-          <section className="w-container mt-16 md:mt-0 relative flex flex-col md:flex-row gap-8 md:justify-between md:items-center mx-auto md:-translate-y-8" id="home">
-            <div>
-              <HeadlineAnim />
-              <Link
-                className="inline-flex shadow-xl shadow-black/20 text-white gap-4 bg-[size:400%] [background-image:linear-gradient(90deg,#4DD080,#04837D,#4DD080,#4DD080);] hover:animate-changeGradientAnim hover:scale-110 transition-transform duration-300 rounded-full py-2 md:py-3 px-6 md:px-8 mt-2 sm:mt-4 md:mt-9 text-3xl md:text-4xl font-semibold"
-                href="#plans"
-              >
-                Planos
-                <Image
-                  className="w-[min(100%,1.5rem)] md:w-auto"
-                  src={ArrowIcon}
-                  alt="Seta"
-                />
-              </Link>
-            </div>
-            <MessageAnim />
-          </section>
+          <HomeSection />
         </div>
         <section className="w-[min(100%,90rem)] mx-auto relative overflow-hidden">
           <ServiceContainer />
