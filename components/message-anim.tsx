@@ -26,7 +26,7 @@ const childrenMessageAnimVariants: Variants = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: index * .7
+      delay: index * 1
     }
   })
 }

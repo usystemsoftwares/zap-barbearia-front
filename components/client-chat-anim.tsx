@@ -16,8 +16,8 @@ const messageAnimVariants: Variants = {
   visible: (index: number) => ({
     display: "flex",
     transition: {
-      delay: index * 8,
-      duration: 7,
+      delay: index * 10,
+      duration: 9,
       ease: "linear"
     }
   }),
