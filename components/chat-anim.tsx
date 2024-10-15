@@ -22,12 +22,13 @@ const ChatAnim = () => {
       {clientes.map((chat, i) => (
         <ClientChatAnim
           key={i}
-          i={i}
+          index={i}
           container={container}
         >
           {chat.mensagens.map((message, j) => (
             <MessageAnim
               key={j}
+              index={j}
               costumer={chat.cliente}
               message={message}
               container={container}

@@ -11,13 +11,13 @@ Fazer um delay de acordo com o index da animação. Se a animação dura 8 segun
 
 const messageAnimVariants: Variants = {
   hidden: {
-    y: "100%"
+    display: "none"
   },
-  visible: (i: number) => ({
-    y: "20%",
+  visible: (index: number) => ({
+    display: "flex",
     transition: {
-      delay: i * 10,
-      duration: 10,
+      delay: index * 8,
+      duration: 7,
       ease: "linear"
     }
   }),
@@ -32,19 +32,18 @@ const messageAnimVariants: Variants = {
 type ClientChatAnimProps = {
   container: React.MutableRefObject<null>;
   children: React.ReactNode;
-  i: number;
+  index: number;
 }
 
-const ClientChatAnim = ({ container, children, i }: ClientChatAnimProps) => {
+const ClientChatAnim = ({ container, children, index }: ClientChatAnimProps) => {
   const [animCompleted, setAnimCompleted] = useState(false)
   const isInView = useInView(container, {
     once: true
   })
 
-
   return (
     <AnimatePresence
-      key={i}
+      key={index}
     >
       {!animCompleted &&
         <motion.ul
@@ -53,12 +52,12 @@ const ClientChatAnim = ({ container, children, i }: ClientChatAnimProps) => {
           animate={isInView ? "visible" : "hidden"}
           exit="exit"
           onAnimationComplete={() => {
-            if (clientes.length - 1 > i) {
+            if (clientes.length - 1 > index) {
               setAnimCompleted(true)
             }
           }
           }
-          custom={i}
+          custom={index}
           variants={messageAnimVariants}
         >
           {children}

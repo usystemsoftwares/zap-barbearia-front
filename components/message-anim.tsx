@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { motion, useInView, Variants } from "framer-motion"
-import { useRef } from "react"
+import { useRef } from "react";
 
 type MessageAnimProps = {
   container: React.MutableRefObject<null>;
@@ -14,32 +14,36 @@ type MessageAnimProps = {
     barbearia: string;
     cliente?: undefined;
   });
+  index: number;
 }
 
 const childrenMessageAnimVariants: Variants = {
-  initial: {
+  hidden: {
     opacity: 0,
     y: 5
   },
-  animate: {
+  visible: (index: number) => ({
     opacity: 1,
-    y: 0
-  }
+    y: 0,
+    transition: {
+      delay: index * .7
+    }
+  })
 }
 
-const MessageAnim = ({ costumer, container, message }: MessageAnimProps) => {
+const MessageAnim = ({ container, message, index }: MessageAnimProps) => {
   const ref = useRef(null)
   const isInView = useInView(ref, {
-    root: container,
-    amount: .8
+    root: container
   })
 
   return (
     <motion.li
-      className={cn("rounded-[.9375rem] px-4 py-3 leading-[1.25]  w-fit max-w-[80%]", message.barbearia ? "bg-dark-green self-end" : "bg-dark-gray flex-col")}
       ref={ref}
-      initial="initial"
-      animate={isInView ? "animate" : "initial"}
+      className={cn("rounded-[.9375rem] px-4 py-3 leading-[1.25]  w-fit max-w-[80%]", message.barbearia ? "bg-dark-green self-end" : "bg-dark-gray flex-col")}
+      custom={index}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
       variants={childrenMessageAnimVariants}
     >
       {message.barbearia ?? message.cliente} {/* <span className="text-sm opacity-50 text-end">{message.time}</span> */}
