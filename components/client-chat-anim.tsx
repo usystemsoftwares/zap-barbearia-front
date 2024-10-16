@@ -2,12 +2,20 @@
 
 import { clientes } from "@/clientes";
 import { AnimatePresence, motion, useInView, Variants } from "framer-motion"
+import Image from "next/image";
+
 import { useState } from "react";
 
-/* 
-depois da animação ser completada, ela será excluída do dom e outra animação acontecerá no lugar dela e o processo se repetirá infinitamente.
-Fazer um delay de acordo com o index da animação. Se a animação dura 8 segundos, a primeira animação acontecerá imediatamente pois o index dela é 0, e a segunda animação acontecerá após 8 segundos porque o index dela é 1, e o cálculo vai ser (index * 8). e ela vai ser removida do dom depois de concluída. cada animação vai ter um animatepresence
+import ArrowZap from "/public/zapbarbearia/icons/arrow-zap.svg"
+import ProfilePhoto from "/public/zapbarbearia/icons/profile-photo.svg"
+import CellPhoneIcon from "/public/zapbarbearia/icons/telephone.svg"
+import VideoCallIcon from "/public/zapbarbearia/icons/video.svg"
+
+/*
+ ELE TEM QUE COMEÇAR COM A OPACIDADE 0 E SIMPLESMENTE ANIMAR PARA OPACIDADE 1. ELE APARECERÁ QUANDO O UL FOR INVIEW = TRUE 
 */
+
+/* mesma lógica que client chat anim component */
 
 const messageAnimVariants: Variants = {
   hidden: {
@@ -33,37 +41,41 @@ type ClientChatAnimProps = {
   container: React.MutableRefObject<null>;
   children: React.ReactNode;
   index: number;
+  costumerName: string;
 }
 
-const ClientChatAnim = ({ container, children, index }: ClientChatAnimProps) => {
+const ClientChatAnim = ({ container, children, index, costumerName }: ClientChatAnimProps) => {
   const [animCompleted, setAnimCompleted] = useState(false)
   const isInView = useInView(container, {
     once: true
   })
 
   return (
-    <AnimatePresence
-      key={index}
-    >
-      {!animCompleted &&
-        <motion.ul
-          className="absolute inset-0 px-4 py-6 text-white font-medium flex flex-col gap-2"
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          exit="exit"
-          onAnimationComplete={() => {
-            if (clientes.length - 1 > index) {
-              setAnimCompleted(true)
+    <div>
+
+      <AnimatePresence
+        key={index}
+      >
+        {!animCompleted &&
+          <motion.ul
+            initial="hidden"
+            className="flex flex-col mx-3 my-2 gap-2"
+            animate={isInView ? "visible" : "hidden"}
+            exit="exit"
+            onAnimationComplete={() => {
+              if (clientes.length - 1 > index) {
+                setAnimCompleted(true)
+              }
             }
-          }
-          }
-          custom={index}
-          variants={messageAnimVariants}
-        >
-          {children}
-        </motion.ul>
-      }
-    </AnimatePresence>
+            }
+            custom={index}
+            variants={messageAnimVariants}
+          >
+            {children}
+          </motion.ul>
+        }
+      </AnimatePresence>
+    </div>
   )
 }
 

@@ -40,7 +40,7 @@ const MessageAnim = ({ container, message, index }: MessageAnimProps) => {
   return (
     <motion.li
       ref={ref}
-      className={cn("rounded-[.9375rem] px-4 py-3 leading-[1.25]  w-fit max-w-[80%]", message.barbearia ? "bg-dark-green self-end" : "bg-dark-gray flex-col")}
+      className={cn("rounded-[.9375rem] text-base sm:text-lg px-4 py-3 leading-[1.25]  w-fit max-w-[80%]", message.barbearia ? "bg-dark-green self-end" : "bg-dark-gray flex-col")}
       custom={index}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
