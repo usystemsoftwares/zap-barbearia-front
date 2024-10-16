@@ -41,7 +41,7 @@ const PlanSection = () => {
                 <li><Image src={BasicVerifyIcon} alt="verify icon" /> Acesso a blogs</li>
               </ul>
               <Link
-                className="inline-block relative border-2 py-1 text-center text-[1.625rem] font-semibold border-white w-[min(100%,14.375rem)] rounded-full contract-button"
+                className="inline-block relative border-2 py-2 text-center text-[1.625rem] font-semibold border-white w-[min(100%,14.375rem)] rounded-full contract-button"
                 href={""}
               >Contratar</Link>
             </li>
@@ -71,7 +71,7 @@ const PlanSection = () => {
                 <li><Image src={ProfessionalVerifyIcon} alt="verify icon" /> Acesso a blogs</li>
               </ul>
               <Link
-                className="relative inline-block border-2 py-1 text-center text-[1.625rem] font-semibold border-transparent w-[min(100%,14.375rem)] rounded-full bg-gradient-to-r from-primary-green to-cyan bg-clip-text text-transparent contract-button before:bg-gradient-to-r before:from-primary-green before:to-cyan"
+                className="relative inline-block border-2 py-2 text-center text-[1.625rem] font-semibold border-transparent w-[min(100%,14.375rem)] rounded-full bg-gradient-to-r from-primary-green to-cyan bg-clip-text text-transparent contract-button before:bg-gradient-to-r before:from-primary-green before:to-cyan"
                 href={""}
               >Contratar</Link>
             </li>
@@ -98,7 +98,7 @@ const PlanSection = () => {
                 <li><Image src={PremiumVerifyIcon} alt="verify icon" /> Acesso a relatórios</li>
               </ul>
               <Link
-                className="relative inline-block border-2 py-1 text-center text-[1.625rem] font-semibold border-transparent w-[min(100%,14.375rem)] bg-gradient-to-r from-primary-golden to-secondary-golden bg-clip-text text-transparent rounded-full contract-button before:bg-gradient-to-r before:from-primary-golden before:to-secondary-golden"
+                className="relative inline-block border-2 py-2 text-center text-[1.625rem] font-semibold border-transparent w-[min(100%,14.375rem)] bg-gradient-to-r from-primary-golden to-secondary-golden bg-clip-text text-transparent rounded-full contract-button before:bg-gradient-to-r before:from-primary-golden before:to-secondary-golden"
                 href={""}
               >Contratar</Link>
             </li>
