@@ -10,7 +10,7 @@ const HomeSection = () => {
       <div>
         <HeadlineAnim />
         <Link
-          className="inline-flex shadow-xl shadow-black/20 text-white gap-4 bg-[size:400%] [background-image:linear-gradient(90deg,#4DD080,#04837D,#4DD080,#4DD080);] hover:animate-changeGradientAnim hover:scale-110 transition-transform duration-300 rounded-full py-2 md:py-3 px-6 md:px-8 mt-2 sm:mt-4 md:mt-9 text-3xl md:text-4xl font-semibold"
+          className="inline-flex shadow-xl shadow-black/20 text-white gap-4 bg-[size:400%] [background-image:linear-gradient(90deg,#4DD080,#04837D,#4DD080,#4DD080);] animate-change-gradient hover:scale-110 transition-transform duration-300 rounded-full py-2 md:py-3 px-6 md:px-8 mt-2 sm:mt-4 md:mt-9 text-3xl md:text-4xl font-semibold"
           href="#plans"
         >
           Planos

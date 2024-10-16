@@ -7,12 +7,16 @@ import FaqList from "@/components/faq-list";
 import CRMAnim from "@/components/crm-anim";
 import ServiceContainer from "@/components/service-container";
 import HomeSection from "@/components/home-section";
+import StepSection from "@/components/step-section";
 
-import Checklist from "/public/zapbarbearia/checklist.webp"
-import BarberIcon from "/public/zapbarbearia/barber-icon.webp"
-import Gear from "/public/zapbarbearia/gear.webp"
-import WppCheckIcon from "/public/zapbarbearia/wpp-check.webp"
-import CheckIcon from "/public/zapbarbearia/check-icon.svg"
+/* 
+TODO:
+- POP UP WPP ANIMATION
+- CONFETTI ANIMATION INVIEW IN "Como usar o ZapBarbearia"? SECTION
+- PLAN SECTION FUNCTIONALITY
+- PLAN SECTION COPY (ask to Raphael)
+- FAQ SECTION COPY (ask to Raphael)
+*/
 
 const Home = () => {
   return (
@@ -38,76 +42,7 @@ const Home = () => {
           {/* <div className="absolute [background-image:radial-gradient(circle,#2200FF_0%,rgba(255,255,255,0)_75%)] rounded-full right-1/2 translate-x-1/2 w-[25rem] aspect-square"></div> */}
           <CRMAnim />
         </section>
-        <section className="w-lg-container mx-auto mt-36 mb-16" id="step-by-step">
-          <h2 className="text-center font-bold text-5xl">Como usar o <span className="bg-gradient-to-r from-[#04837D] to-primary-green bg-clip-text text-transparent">ZapBarbearia?</span></h2>
-          <ul className="relative *:flex max-md:*:flex-col md:*:items-center md:*:justify-between py-20 md:py-80 font-medium text-3xl">
-            <li className="md:*:w-1/2 md:flex-row-reverse">
-              <div className="max-w-[23ch]">
-                <h3 className="text-5xl font-bold text-center">Passo 1</h3>
-                <h4 className="text-3xl font-bold text-center my-8">Adquira sua licença</h4>
-                <p>Escola o plano que melhor atende às necessidades da sua barbearia e adquira sua licença de uso de forma rápida e segura</p>
-              </div>
-              <div>
-                <Image
-                  className="mx-auto md:mx-0 mt-12 md:mt-0"
-                  src={Checklist}
-                  alt="Checklist"
-                />
-              </div>
-            </li>
-            <li className="md:*:w-1/2 my-44">
-              <div className="max-w-[23ch]">
-                <h3 className="text-5xl font-bold text-center">Passo 2</h3>
-                <h4 className="text-3xl font-bold text-center my-8">Configure Sua Barbearia</h4>
-                <p>Cadastre os dados da sua empresa, incluindo horários de funcionamento, serviços oferecidos e informações dos barbeiros.</p>
-              </div>
-              <div>
-                <div className="max-w-[11.813rem] mx-auto md:ml-auto md:mr-20 mt-12 md:mt-0 relative">
-                  <Image
-                    className="absolute top-[10%] -right-[50%]"
-                    src={Gear}
-                    alt="Ícone de engrenagem"
-                  />
-                  <Image
-                    src={BarberIcon}
-                    alt="Ícone de barbeiro"
-                  />
-                  <Image
-                    className="absolute max-w-[3.75rem] -left-[35%] bottom-0"
-                    src={Gear}
-                    alt="Ícone de engrenagem"
-                  />
-                </div>
-              </div>
-            </li>
-            <li className="md:*:w-1/2 md:flex-row-reverse">
-              <div className="max-w-[24ch]">
-                <h3 className="text-5xl font-bold text-center">Passo 3</h3>
-                <h4 className="text-3xl font-bold text-center my-8">Integre o WhatsApp</h4>
-                <p>Vincule seu WhatsApp escaneando o QR Code fornecido e comece a interagir com seus clientes instantaneamente</p>
-              </div>
-              <div>
-                <Image
-                  className="mx-auto md:mx-0 mt-12 md:mt-0"
-                  src={WppCheckIcon}
-                  alt="Whatsapp check"
-                />
-              </div>
-            </li>
-          </ul>
-          <div className="relative text-center">
-            <div className="max-w-[58ch] mx-auto text-center">
-              <h3 className="text-5xl font-bold">Pronto!</h3>
-              <p className="text-3xl font-medium mt-8">Sua barbearia está pronta para oferecer uma experiência moderna e eficiente aos seus clientes com a ajuda da inteligência artificial e integração com o WhatsApp.</p>
-            </div>
-            <div className="w-[min(100%,8.75rem)] mt-20 grid place-items-center rounded-full aspect-square bg-gradient-to-t from-cyan to-primary-green mx-auto">
-              <Image
-                src={CheckIcon}
-                alt="Ícone de verificado"
-              />
-            </div>
-          </div>
-        </section>
+        <StepSection />
         <PlanSection />
         <section className="bg-white py-28" id="faq">
           <div className="w-[min(56.25rem,90%)] mx-auto">

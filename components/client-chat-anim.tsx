@@ -52,14 +52,13 @@ const ClientChatAnim = ({ container, children, index, costumerName }: ClientChat
 
   return (
     <div>
-
       <AnimatePresence
         key={index}
       >
         {!animCompleted &&
           <motion.ul
             initial="hidden"
-            className="flex flex-col mx-3 my-2 gap-2"
+            className="flex flex-col mx-3 md:mx-2 lg:mx-3 my-2 md:my-1 lg:my-2 gap-2 md:gap-1 lg:gap-2"
             animate={isInView ? "visible" : "hidden"}
             exit="exit"
             onAnimationComplete={() => {

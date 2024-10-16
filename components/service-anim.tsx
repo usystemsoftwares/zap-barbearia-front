@@ -1,14 +1,17 @@
 "use client"
 
 import { motion } from "framer-motion"
+
 import Image from "next/image"
-import WppBg from "/public/zapbarbearia/whatsapp-background.webp"
-import CellPhone from "/public/zapbarbearia/cell-phone.svg"
 import Robot from "/public/zapbarbearia/robot.svg"
 import Package from "/public/zapbarbearia/package.svg"
+import XIcon from "/public/zapbarbearia/x-icon.svg"
+import PlusIcon from "/public/zapbarbearia/plus-icon.svg"
+
 import React from "react"
 import FadeUp from "./fade-up"
-
+import MiniChat from "./mini-chat-wpp"
+import MiniCellPhoneAnim from "./mini-cellphone-anim"
 
 const ServiceAnim = () => {
 
@@ -22,28 +25,21 @@ const ServiceAnim = () => {
       }}
     >
       <FadeUp className="from-[#E0FFEF] to-[#F5FBD9] lg:[grid-area:span_1/span_17]">
-        <article className="flex flex-col md:flex-row lg:gap-6 justify-between overflow-hidden">
+        <article className="flex flex-col md:flex-row lg:gap-4 justify-center overflow-hidden">
           <div>
-            <h4 className="text-2xl font-semibold mb-4">Mais produtividade</h4>
+            <h4 className="text-2xl font-semibold mb-4 flex items-center gap-2">Mais produtividade <Image src={PlusIcon} alt="Ícone de mais" /></h4>
             <p className="max-w-[27ch]">Clientes não querem complicação. Com 3 mensagens no WhatsApp, o agendamento está feito. Com uma integração simples e automática, eles recebem respostas, lembretes e você mantém o controle total da sua agenda.</p>
           </div>
-          <Image
-            className="w-[min(100%,11.25rem)] self-center translate-y-[10%]"
-            src={WppBg}
-            alt="Celular"
-          />
+          <MiniChat />
         </article>
       </FadeUp>
       <FadeUp className="from-[#D6FFF2] to-[#DBFDFF] lg:[grid-area:span_1/span_13]">
-        <article className="flex min-h-full flex-col">
+        <article className="flex min-h-full flex-col overflow-hidden">
           <div>
-            <h4 className="text-2xl font-semibold mb-[.625rem]">Sem formulários</h4>
+            <h4 className="flex items-center gap-2 text-2xl line font-semibold mb-[.625rem]">Sem formulários <Image className="translate-y-[.0625rem]" src={XIcon} alt="Ícone X" /></h4>
             <p>Esqueça os formulários, aplicativos e links confusos. No ZapBarbearia, seus clientes agendam o serviço em 3 mensagens rápidas no WhatsApp, e a I.A. cuida do resto!</p>
           </div>
-          <Image
-            className="mt-auto mx-auto"
-            src={CellPhone}
-            alt="Celular"
+          <MiniCellPhoneAnim
           />
         </article>
       </FadeUp>

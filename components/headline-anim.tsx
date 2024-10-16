@@ -1,5 +1,6 @@
 "use client"
 
+import { cn } from "@/lib/utils"
 import { motion } from "framer-motion"
 
 const HeadlineAnim = () => {
@@ -36,7 +37,12 @@ const HeadlineAnim = () => {
             {word.split("").map((char, j) => (
               <motion.span
                 key={j}
-                className="inline-block"
+                className={
+                  cn("inline-block",
+                    char === "I" ? "text-[#47ca80]" : null,
+                    char === "A" ? "text-[#25a680]" : null,
+                    char === "." ? "text-[#39bb80]" : null
+                  )}
                 variants={defaultAnimations}
               >{char}</motion.span>
             ))}

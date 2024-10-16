@@ -20,9 +20,11 @@ const ServiceContainer = () => {
 
   return (
     <div className="w-container mx-auto text-center pt-24">
-      <motion.div className="absolute top-[5%] sm:top-[3.5%] md:top-0 w-[110%] xl:w-full right-1/2 translate-x-1/2" style={{
-        opacity: opacity
-      }}>
+      <motion.div
+        className="absolute top-[5%] sm:top-[3.5%] md:top-0 w-[110%] xl:w-full right-1/2 translate-x-1/2"
+        style={{
+          opacity: opacity
+        }}>
         <Image
           className="absolute top-0 w-full"
           src={RectangleBlur}
@@ -30,7 +32,10 @@ const ServiceContainer = () => {
           draggable={false}
         />
       </motion.div>
-      <motion.h2 style={{ opacity: txtOpacity }} className="text-5xl xl:text-6xl font-bold mb-8 relative md:whitespace-nowrap">Preocupe-se somente em cortar</motion.h2>
+      <motion.h2
+        style={{ opacity: txtOpacity }}
+        className="text-4xl sm:text-5xl xl:text-6xl font-bold mb-8 relative md:whitespace-nowrap"
+      >Preocupe-se somente em cortar</motion.h2>
       <motion.div
         ref={ref}
         initial={false}

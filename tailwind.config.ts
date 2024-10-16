@@ -9,7 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       animation: {
-        'changeGradientAnim': 'changeGradient 12s linear infinite'
+        'change-gradient': 'changeGradient 25s linear infinite',
+        'spin-slow': 'spin 5.5s linear infinite',
+        'reverse-spin-slow': 'reverseSpin 5.5s linear infinite'
       },
       keyframes: {
         changeGradient: {
@@ -18,6 +20,16 @@ const config: Config = {
           },
           "100%": {
             backgroundPosition: "400%"
+          }
+        },
+        reverseSpin: {
+          "100%": {
+            transform: "rotate(-360deg);"
+          }
+        },
+        strongPulse: {
+          "50%": {
+            opacity: ".3"
           }
         }
       },
