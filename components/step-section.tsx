@@ -48,11 +48,11 @@ const StepSection = () => {
             }}
           >
             <div className="max-w-[23ch]">
-              <h3 className="text-5xl font-bold text-center">Passo 1</h3>
-              <h4 className="text-3xl font-bold text-center my-8">Adquira sua licença</h4>
+              <h3 className="text-4xl sm:text-5xl font-bold text-center">Passo 1</h3>
+              <h4 className="text-2xl sm:text-3xl font-bold text-center my-8">Adquira sua licença</h4>
               <p>Escola o plano que melhor atende às necessidades da sua barbearia e adquira sua licença de uso de forma rápida e segura</p>
             </div>
-            <div className="w-fit">
+            <div className="w-4/5 sm:w-auto">
               <Image
                 className="mx-auto lg:mx-0 lg:mt-0"
                 src={Checklist}
@@ -77,12 +77,12 @@ const StepSection = () => {
             }}
           >
             <div className="max-w-[23ch]">
-              <h3 className="text-5xl font-bold text-center">Passo 2</h3>
-              <h4 className="text-3xl font-bold text-center my-8">Configure Sua Barbearia</h4>
+              <h3 className="text-4xl sm:text-5xl font-bold text-center">Passo 2</h3>
+              <h4 className="text-2xl sm:text-3xl font-bold text-center my-8">Configure Sua Barbearia</h4>
               <p>Cadastre os dados da sua empresa, incluindo horários de funcionamento, serviços oferecidos e informações dos barbeiros.</p>
             </div>
             <div>
-              <div className="max-w-[11.813rem] mx-auto lg:ml-auto relative">
+              <div className="w-4/5 sm:w-auto max-w-[11.813rem] mx-auto lg:ml-auto relative">
                 <Image
                   className="absolute top-[10%] -right-[37.5%] sm:-right-1/2 animate-spin-slow"
                   src={Gear}
@@ -117,11 +117,11 @@ const StepSection = () => {
             }}
           >
             <div className="max-w-[24ch]">
-              <h3 className="text-5xl font-bold text-center">Passo 3</h3>
-              <h4 className="text-3xl font-bold text-center my-8">Integre o WhatsApp</h4>
+              <h3 className="text-4xl sm:text-5xl font-bold text-center">Passo 3</h3>
+              <h4 className="text-2xl sm:text-3xl font-bold text-center my-8">Integre o WhatsApp</h4>
               <p>Vincule seu WhatsApp escaneando o QR Code fornecido e comece a interagir com seus clientes instantaneamente</p>
             </div>
-            <div>
+            <div className="w-4/5 sm:w-auto">
               <Image
                 className="mx-auto md:mx-0"
                 src={WppCheckIcon}
