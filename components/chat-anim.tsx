@@ -99,7 +99,7 @@ const ChatAnim = () => {
             costumerName={chat.cliente}
             container={container}
           >
-            <div className="w-fit mx-auto bg-[#D9D9D9] bg-opacity-25 py-2 px-4 backdrop-blur-lg rounded-2xl">{chat.peculiaridade}</div>
+            <div className="w-fit text-base mx-auto bg-[#D9D9D9] bg-opacity-25 py-2 px-4 backdrop-blur-lg rounded-2xl">{chat.peculiaridade}</div>
             {chat.mensagens.map((message, j) => (
               <React.Fragment key={j}>
                 <MessageAnim

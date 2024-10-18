@@ -12,10 +12,7 @@ import { TabProvider } from "@/contexts/tab-ctx";
 
 /* 
 TODO:
-- CONFETTI ANIMATION INVIEW IN "Como usar o ZapBarbearia"? SECTION
-- PLAN SECTION FUNCTIONALITY
-- PLAN SECTION COPY (ask to Raphael)
-- FAQ SECTION COPY (ask to Raphael)
+- PLAN SECTION
 */
 
 const Home = () => {
@@ -68,8 +65,7 @@ const Home = () => {
                 <li><Link href={"#home"}>Início</Link></li>
                 <li><Link href={"#step-by-step"}>Passo a passo</Link></li>
                 <li><Link href={"#faq"}>Dúvidas</Link></li>
-                <li><Link href={"#plans"}>Planos</Link></li>
-                <li className="last:mb-0"><Link href={""}>Como funciona</Link></li>
+                <li className="last:mb-0"><Link href={"#plans"}>Planos</Link></li>
               </ul>
             </nav>
           </div>

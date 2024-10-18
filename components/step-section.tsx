@@ -87,7 +87,7 @@ const StepSection = () => {
             <div className="max-w-[23ch]">
               <h3 className="text-4xl sm:text-5xl font-bold text-center">Passo 1</h3>
               <h4 className="text-2xl sm:text-3xl font-bold text-center my-8">Adquira sua licença</h4>
-              <p>Escola o plano que melhor atende às necessidades da sua barbearia e adquira sua licença de uso de forma rápida e segura</p>
+              <p>Escolha o plano que melhor atende às necessidades da sua barbearia e adquira sua licença de uso de forma rápida e segura</p>
             </div>
             <div className="w-4/5 sm:w-auto">
               <Image
