@@ -6,11 +6,48 @@ import BarberIcon from "/public/zapbarbearia/barber-icon.webp"
 import Gear from "/public/zapbarbearia/gear.webp"
 import WppCheckIcon from "/public/zapbarbearia/wpp-check.webp"
 import CheckIcon from "/public/zapbarbearia/check-icon.svg"
-import { motion } from "framer-motion"
+import { AnimatePresence, motion, useInView } from "framer-motion"
+import { useEffect, useRef, useState } from "react"
+import ReactConfetti from "react-confetti"
 
 const StepSection = () => {
+  const ref = useRef(null)
+  let isInView = useInView(ref, {
+    amount: 1,
+    once: true
+  })
+
+  const [showConfetti, setShowConfetti] = useState(false)
+
+  useEffect(() => {
+    if (isInView) {
+      setShowConfetti(true)
+      setTimeout(() => {
+        isInView = false
+        setShowConfetti(false)
+      }, 2500)
+    }
+  }, [isInView, setShowConfetti])
+
   return (
-    <section className="w-lg-container mx-auto mt-36 mb-16 overflow-hidden" id="step-by-step">
+    <section className="relative w-lg-container mx-auto mt-36 mb-52 overflow-hidden" id="step-by-step">
+      <AnimatePresence>
+        {showConfetti &&
+          <motion.div
+            className="fixed inset-0"
+            exit={{
+              opacity: 0
+            }}
+          >
+            <ReactConfetti
+              style={{
+                inset: "0",
+                position: "fixed",
+              }}
+            />
+          </motion.div>
+        }
+      </AnimatePresence>
       <h2 className="text-center font-bold text-5xl">Como usar o <span className="bg-gradient-to-r from-[#04837D] to-primary-green bg-clip-text text-transparent">ZapBarbearia?</span></h2>
       <div className="relative py-20 lg:py-80">
         <div className="hidden lg:block absolute right-1/2 translate-x-1/2 top-0 w-[.0625rem] h-1/2">
@@ -82,7 +119,7 @@ const StepSection = () => {
               <p>Cadastre os dados da sua empresa, incluindo horários de funcionamento, serviços oferecidos e informações dos barbeiros.</p>
             </div>
             <div>
-              <div className="w-4/5 sm:w-auto max-w-[11.813rem] mx-auto lg:ml-auto relative">
+              <div className="w-4/5 sm:w-auto max-w-[11.813rem] ml-auto mr-auto lg:ml-auto lg:mr-24 relative">
                 <Image
                   className="absolute top-[10%] -right-[37.5%] sm:-right-1/2 animate-spin-slow"
                   src={Gear}
@@ -132,7 +169,8 @@ const StepSection = () => {
         </ul>
       </div>
       <motion.div
-        className="relative text-center"
+        ref={ref}
+        className="relative overflow-hidden text-center"
         initial={{
           opacity: 0
         }}
@@ -147,6 +185,7 @@ const StepSection = () => {
           once: true
         }}
       >
+
         <div className="max-w-[58ch] mx-auto text-center">
           <h3 className="text-5xl font-bold">Pronto!</h3>
           <p className="text-3xl font-medium mt-8">Sua barbearia está pronta para oferecer uma experiência moderna e eficiente aos seus clientes com a ajuda da inteligência artificial e integração com o WhatsApp.</p>

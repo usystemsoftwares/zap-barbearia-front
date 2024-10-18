@@ -8,10 +8,10 @@ import CRMAnim from "@/components/crm-anim";
 import ServiceContainer from "@/components/service-container";
 import HomeSection from "@/components/home-section";
 import StepSection from "@/components/step-section";
+import { TabProvider } from "@/contexts/tab-ctx";
 
 /* 
 TODO:
-- POP UP WPP ANIMATION
 - CONFETTI ANIMATION INVIEW IN "Como usar o ZapBarbearia"? SECTION
 - PLAN SECTION FUNCTIONALITY
 - PLAN SECTION COPY (ask to Raphael)
@@ -43,7 +43,9 @@ const Home = () => {
           <CRMAnim />
         </section>
         <StepSection />
-        <PlanSection />
+        <TabProvider>
+          <PlanSection />
+        </TabProvider>
         <section className="bg-white py-28" id="faq">
           <div className="w-[min(56.25rem,90%)] mx-auto">
             <p className="text-base font-light text-center">FAQ ZAP BARBEARIA</p>
