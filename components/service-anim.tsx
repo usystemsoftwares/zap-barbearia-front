@@ -17,7 +17,7 @@ const ServiceAnim = () => {
 
   return (
     <motion.ul
-      className="*:bg-gradient-to-r grid max-lg:w-[min(35rem,100%)] max-lg:mx-auto lg:grid-cols-[repeat(30,minmax(0,1fr))] leading-[1.2] gap-5 *:px-5 *:rounded-2xl *:pt-5 text-start"
+      className="*:bg-gradient-to-r grid max-lg:w-[min(35rem,100%)] max-lg:mx-auto lg:grid-cols-[repeat(30,minmax(0,1fr))] leading-[1.2] gap-3 *:px-5 *:rounded-2xl *:pt-5 text-start"
       initial={false}
       animate="visible"
       transition={{

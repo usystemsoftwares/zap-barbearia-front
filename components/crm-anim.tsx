@@ -11,7 +11,7 @@ import FadeUp from "./fade-up"
 const CRMAnim = () => {
   return (
     <motion.ul
-      className="grid lg:grid-cols-2 leading-[1.2] gap-5 *:rounded-[.9375rem] *:border-2 *:border-[#D9D9D9] *:overflow-hidden text-start relative"
+      className="grid lg:grid-cols-2 leading-[1.2] gap-3 *:rounded-[.9375rem] *:border-2 *:border-[#D9D9D9] *:overflow-hidden text-start relative"
     >
       <FadeUp className="">
         <Image

@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Logo from "/public/zapbarbearia/logo.svg"
-import WhiteLogo from "/public/zapbarbearia/white-logo.svg"
+import Logo from "/public/zapbarbearia/logo-preta.svg"
+import WhiteLogo from "/public/zapbarbearia/logo-branca.svg"
 import Link from "next/link";
 import PlanSection from "@/components/plan-section";
 import FaqList from "@/components/faq-list";
@@ -9,11 +9,6 @@ import ServiceContainer from "@/components/service-container";
 import HomeSection from "@/components/home-section";
 import StepSection from "@/components/step-section";
 import { TabProvider } from "@/contexts/tab-ctx";
-
-/* 
-TODO:
-- PLAN SECTION
-*/
 
 const Home = () => {
   return (
@@ -31,11 +26,11 @@ const Home = () => {
           </div>
           <HomeSection />
         </div>
-        <section className="w-[min(100%,90rem)] mx-auto relative overflow-hidden">
+        <section className="w-container mx-auto relative overflow-hidden">
           <ServiceContainer />
         </section>
-        <section className="w-container mx-auto bg-white relative rounded-[1.25rem] px-6 xl:px-14 pb-16 pt-20 crm-section before:bg-gradient-to-b before:from-primary-green">
-          <h2 className="text-center text-5xl font-bold mb-12 lg:mb-28 relative">CRM integrado</h2>
+        <section className="w-[min(90%,69.375rem)] mx-auto bg-white relative rounded-[1.25rem] px-6 xl:px-12 pb-16 pt-20 crm-section before:bg-gradient-to-b before:from-primary-green">
+          <h2 className="text-center text-5xl font-bold mb-12 lg:mb-18 relative">CRM integrado</h2>
           {/* <div className="absolute [background-image:radial-gradient(circle,#2200FF_0%,rgba(255,255,255,0)_75%)] rounded-full right-1/2 translate-x-1/2 w-[25rem] aspect-square"></div> */}
           <CRMAnim />
         </section>
@@ -44,7 +39,7 @@ const Home = () => {
           <PlanSection />
         </TabProvider>
         <section className="bg-white py-28" id="faq">
-          <div className="w-[min(56.25rem,90%)] mx-auto">
+          <div className="w-[min(90%,50rem)] mx-auto">
             <p className="text-base font-light text-center">FAQ ZAP BARBEARIA</p>
             <h2 className="text-2xl text-center md:text-5xl font-extrabold lg:text-6xl mt-[.625rem] mb-12">DÚVIDAS FREQUENTES</h2>
             <FaqList />

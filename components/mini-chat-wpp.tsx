@@ -57,7 +57,7 @@ const MiniChat = () => {
       />
       <div className="absolute inset-0 text-white flex flex-col">
         <WppHeader />
-        <ul className="flex flex-col mx-2 my-2 gap-2 *:rounded-[.25rem] text-[.875rem] *:px-2 *:py-1 *:leading-[1.25] *:w-fit *:max-w-[80%]">
+        <ul className="flex flex-col mx-2 my-2 gap-2 *:rounded-[.25rem] text-[.8125rem] *:px-2 *:py-1 *:leading-[1.25] *:w-fit *:max-w-[80%]">
           <li className="bg-dark-gray flex-col">E aí, mano! Queria marcar um corte pra amanhã de tarde.</li>
           <li className="bg-dark-green self-end">Fala, João! Temos disponível amanhã às 15h. Pode ser?</li>
           <li className="bg-dark-gray flex-col">Fechou!</li>

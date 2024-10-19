@@ -19,7 +19,7 @@ const ServiceContainer = () => {
   const txtOpacity = useTransform(scrollYProgress, [0, 1], [.85, .4])
 
   return (
-    <div className="w-container mx-auto text-center pt-24">
+    <div className="w-[min(90%,69.375rem)] mx-auto text-center pt-24">
       <motion.div
         className="absolute top-[5%] sm:top-[3.5%] md:top-0 w-[110%] xl:w-full right-1/2 translate-x-1/2"
         style={{
@@ -40,13 +40,13 @@ const ServiceContainer = () => {
         ref={ref}
         initial={false}
         style={{ y }}
-        className="bg-white pt-20 pb-14 px-6 xl:px-14 rounded-[1.25rem] relative"
+        className="bg-white pt-8 md:pt-16 pb-12 px-6 xl:px-10 rounded-[1.25rem] relative"
       >
-        <h3 className="text-5xl font-bold max-w-[19ch] mx-auto">Deixe o atendimento com a gente!</h3>
-        <p className="mt-12 mb-5 leading-[1.2]">Com o ZapBarbearia, seu tempo é dedicado ao que importa: o atendimento ao cliente. Nossa Inteligência Artificial cuida de todo o resto. Agendamentos, respostas automáticas e lembretes para os clientes, tudo funcionando de maneira autônoma no WhatsApp. Nunca mais perca controle da agenda ou deixe clientes esperando. Você foca no serviço, a tecnologia faz o restante.</p>
+        <h3 className="text-4xl sm:text-5xl font-bold max-w-[19ch] mx-auto">Deixe o atendimento com a gente!</h3>
+        <p className="mt-5 sm:mt-12 mb-5 leading-[1.2]">Com o ZapBarbearia, seu tempo é dedicado ao que importa: o atendimento ao cliente. Nossa Inteligência Artificial cuida de todo o resto. Agendamentos, respostas automáticas e lembretes para os clientes, tudo funcionando de maneira autônoma no WhatsApp. Nunca mais perca controle da agenda ou deixe clientes esperando. Você foca no serviço, a tecnologia faz o restante.</p>
         <ServiceAnim />
       </motion.div>
-      <DiscoveredTextAnim className="text-3xl max-w-[56.25rem] mx-auto sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] my-24 leading-[1.1] font-medium text-start" />
+      <DiscoveredTextAnim className="max-w-[56.25rem] mx-auto text-3xl sm:text-[2.5rem] md:text-[3rem] lg:text-[3rem] my-24 leading-[1.1] font-medium text-start" />
     </div>
   )
 }

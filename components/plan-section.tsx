@@ -57,7 +57,7 @@ const PlanList = () => {
   const tabCtx = useContext(TabContext)
 
   return (
-    <ul className="max-lg:w-[min(100%,22.25rem)] max-lg:mx-auto flex flex-col-reverse max-lg:gap-20 gap-4 lg:flex-row lg:justify-between mt-16 *:flex *:flex-col *:place-content-between *:items-center *:py-7 *:px-9 *:border-2 *:rounded-xl *:relative plan-ul">
+    <ul className="max-lg:w-[min(100%,22.25rem)] max-lg:mx-auto flex flex-col-reverse max-lg:gap-20 gap-4 lg:flex-row lg:justify-between mt-16 *:flex *:flex-col *:place-content-between *:items-center *:py-7 *:px-7 *:border-2 *:rounded-xl *:relative plan-ul">
       <li className="lg:self-end">
         <h3 className="text-center text-4xl">Pacote Navalha</h3>
         <p className="font-normal text-base xl:text-lg mt-2 leading-[1.75rem]">Para barbearias que buscam precisão e simplicidade na organização do dia a dia. Ideal para começar com automatização inteligente.</p>
@@ -144,11 +144,11 @@ const PlanSection = () => {
 
   return (
     <div className="bg-white">
-      <section className="bg-black font-bold text-white pt-16 pb-36 relative overflow-hidden [clip-path:polygon(0%_0%,100%_0%,100%_98.75%,0%_100%)] lg:[clip-path:polygon(0%_0%,100%_0%,100%_88%,0%_100%)]" id="plans">
+      <section className="bg-black font-bold text-white pt-16 pb-36 relative overflow-hidden [clip-path:polygon(0%_0%,100%_0%,100%_98.75%,0%_100%)] lg:[clip-path:polygon(0%_0%,100%_0%,100%_91%,0%_100%)]" id="plans">
         <Image className="w-[50%] sm:w-auto absolute bottom-0 left-0 z-10" src={PlansDetails} alt="listra verde clara, branca e verde escura" />
         <div className="absolute max-lg:hidden aspect-square top-0 left-[-10%] w-[40%] [background-image:radial-gradient(circle,rgba(5,132,126,1)_0%,rgba(255,255,255,0)_75%)] opacity-50"></div>
         <div className="absolute max-lg:hidden aspect-square top-0 right-[-10%] w-[40%] [background-image:radial-gradient(circle,rgba(5,132,126,1)_0%,rgba(255,255,255,0)_75%)] opacity-50"></div>
-        <div className="w-[min(77.5rem,90%)] mx-auto relative">
+        <div className="w-[min(90%,69.375rem)] mx-auto relative">
           <h2 className="mx-auto text-5xl text-center">Escolha seu plano ideal</h2>
           <Tab />
           <PlanList />

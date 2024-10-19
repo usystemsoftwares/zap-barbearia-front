@@ -29,7 +29,7 @@ const Accordion = ({ index, title, expanded, setExpanded, description }: Accordi
       <button className="w-full" onClick={
         () => setExpanded(isOpen ? false : index)
       }>
-        <h3 className="flex gap-4 sm:gap-6 font-medium text-lg text-start sm:text-[1.75rem]">
+        <h3 className="flex gap-4 sm:gap-6 font-medium text-lg text-start sm:text-[1.5rem]">
           <Image
             className={cn("transition-transform duration-300", isOpen && "-rotate-180")}
             src={FaqDropDownIcon}
