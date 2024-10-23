@@ -46,7 +46,7 @@ const MessageAnim = ({ container, message, index }: MessageAnimProps) => {
       animate={isInView ? "visible" : "hidden"}
       variants={childrenMessageAnimVariants}
     >
-      {message.barbearia ?? message.cliente} {/* <span className="text-sm opacity-50 text-end">{message.time}</span> */}
+      {message.barbearia ?? message.cliente}
     </motion.li>
   )
 }

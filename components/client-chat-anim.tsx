@@ -2,20 +2,8 @@
 
 import { clientes } from "@/clientes";
 import { AnimatePresence, motion, useInView, Variants } from "framer-motion"
-import Image from "next/image";
 
 import { useState } from "react";
-
-import ArrowZap from "/public/zapbarbearia/icons/arrow-zap.svg"
-import ProfilePhoto from "/public/zapbarbearia/icons/profile-photo.svg"
-import CellPhoneIcon from "/public/zapbarbearia/icons/telephone.svg"
-import VideoCallIcon from "/public/zapbarbearia/icons/video.svg"
-
-/*
- ELE TEM QUE COMEÇAR COM A OPACIDADE 0 E SIMPLESMENTE ANIMAR PARA OPACIDADE 1. ELE APARECERÁ QUANDO O UL FOR INVIEW = TRUE 
-*/
-
-/* mesma lógica que client chat anim component */
 
 const messageAnimVariants: Variants = {
   hidden: {
