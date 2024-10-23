@@ -12,7 +12,7 @@ import FadeUp from "./fade-up"
 const CRMAnim = () => {
   return (
     <motion.ul
-      className="grid lg:grid-cols-[repeat(30,minmax(0,1fr))] *:flex *:flex-col leading-[1.2] gap-3 *:rounded-[1.2rem] *:px-[.4rem] *:pt-4 *:pb-2 *:overflow-hidden *:bg-white *:shadow-md text-start relative [&_p]:pt-2 [&_p]:pb-4 [&_p]:mx-4 [&_p]:leading-[1.1] [&_h3]:mx-4"
+      className="grid w-[min(100%,35rem)] mx-auto leading-[1.2] gap-6 lg:gap-3 lg:mx-0 lg:w-auto lg:grid-cols-[repeat(30,minmax(0,1fr))] *:flex *:flex-col *:rounded-[1.2rem] *:px-[.4rem] *:pt-4 *:pb-2 *:overflow-hidden *:bg-white *:shadow-md text-start relative [&_p]:pt-2 [&_p]:pb-4 [&_p]:mx-4 [&_p]:leading-[1.1] [&_h3]:mx-4"
     >
       <FadeUp className="lg:[grid-area:span_1/span_15]">
         <h3 className="text-3xl font-semibold">Agenda</h3>

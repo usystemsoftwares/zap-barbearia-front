@@ -32,7 +32,7 @@ const StepSection = () => {
   }, [isInView, setShowConfetti])
 
   return (
-    <section className="relative w-[min(90%,69.375rem)] mx-auto mt-36 mb-40 overflow-hidden" id="step-by-step">
+    <section className="relative w-[min(90%,69.375rem)] mx-auto mt-28 lg:mt-36 mb-32 lg:mb-40 overflow-hidden" id="step-by-step">
       <AnimatePresence>
         {showConfetti &&
           <motion.div
