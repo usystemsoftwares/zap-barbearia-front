@@ -29,9 +29,8 @@ const Home = () => {
         <section className="w-container mx-auto relative overflow-hidden">
           <ServiceContainer />
         </section>
-        <section className="w-[min(90%,69.375rem)] mx-auto bg-white relative rounded-[1.25rem] px-6 xl:px-12 pb-16 pt-20 crm-section before:bg-gradient-to-b before:from-primary-green">
-          <h2 className="text-center text-5xl font-bold mb-12 lg:mb-18 relative">CRM integrado</h2>
-          {/* <div className="absolute [background-image:radial-gradient(circle,#2200FF_0%,rgba(255,255,255,0)_75%)] rounded-full right-1/2 translate-x-1/2 w-[25rem] aspect-square"></div> */}
+        <section className="w-[min(90%,75rem)] mx-auto relative rounded-[1.25rem] pb-16 pt-16">
+          <h2 className="text-center text-5xl font-bold mb-12 lg:mb-20 relative">CRM integrado</h2>
           <CRMAnim />
         </section>
         <StepSection />

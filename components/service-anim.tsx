@@ -56,7 +56,7 @@ const ServiceAnim = () => {
           />
         </article>
       </FadeUp>
-      <FadeUp className="from-[#003D3D] max-lg:pb-4 text-white to-[#008861] lg:[grid-area:span_1/span_16]">
+      <FadeUp className="from-[#003D3D] to-[#008861] max-lg:pb-4 text-white lg:[grid-area:span_1/span_16]">
         <article className="flex flex-col md:flex-row gap-4 md:gap-0 lg:gap-6 justify-between">
           <div className="max-w-[26ch]">
             <h4 className="text-2xl font-semibold pb-4">Customize sua abordagem com nosso robô.</h4>
