@@ -8,7 +8,7 @@ type DiscoveredTextProps = {
   className: string;
 }
 
-const WordAnim = ({ word, progress, range }: { word: string, progress: MotionValue, range: number[] }) => {
+const WordAnim: any = ({ word, progress, range }: { word: string, progress: MotionValue, range: number[] }) => {
   const opacity = useTransform(progress, range, [.16, 1])
 
   return (

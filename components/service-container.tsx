@@ -46,7 +46,7 @@ const ServiceContainer = () => {
         <p className="mt-5 sm:mt-12 mb-5 leading-[1.2]">Com o ZapBarbearia, seu tempo é dedicado ao que importa: o atendimento ao cliente. Nossa Inteligência Artificial cuida de todo o resto. Agendamentos, respostas automáticas e lembretes para os clientes, tudo funcionando de maneira autônoma no WhatsApp. Nunca mais perca controle da agenda ou deixe clientes esperando. Você foca no serviço, a tecnologia faz o restante.</p>
         <ServiceAnim />
       </motion.div>
-      <DiscoveredTextAnim className="max-w-[56.25rem] mx-auto text-3xl sm:text-[2.5rem] md:text-[3rem] lg:text-[3rem] my-24 leading-[1.1] font-medium text-start" />
+      <DiscoveredTextAnim className="max-w-[56.25rem] mx-auto text-3xl sm:text-[2.5rem] md:text-[3rem] lg:text-[3rem] my-24 leading-[1.1] font-medium text-start"  />
     </div>
   )
 }

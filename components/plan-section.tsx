@@ -144,7 +144,7 @@ const PlanSection = () => {
 
   return (
     <div className="bg-white">
-      <section className="bg-black font-bold text-white pt-16 pb-36 relative overflow-hidden [clip-path:polygon(0%_0%,100%_0%,100%_98.75%,0%_100%)] lg:[clip-path:polygon(0%_0%,100%_0%,100%_91%,0%_100%)]" id="plans">
+      <section className="bg-black font-bold text-white pt-16 pb-36 relative overflow-hidden [clip-path:polygon(0%_0%,100%_0%,100%_98.75%,0%_100%)] lg:[clip-path:polygon(0%_0%,100%_0%,100%_91%,0%_100%)] scroll-mt-10" id="plans">
         <Image className="w-[50%] sm:w-auto absolute bottom-0 left-0 z-10" src={PlansDetails} alt="listra verde clara, branca e verde escura" />
         <div className="absolute max-lg:hidden aspect-square top-0 left-[-10%] w-[40%] [background-image:radial-gradient(circle,rgba(5,132,126,1)_0%,rgba(255,255,255,0)_75%)] opacity-50"></div>
         <div className="absolute max-lg:hidden aspect-square top-0 right-[-10%] w-[40%] [background-image:radial-gradient(circle,rgba(5,132,126,1)_0%,rgba(255,255,255,0)_75%)] opacity-50"></div>
