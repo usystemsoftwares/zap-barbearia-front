@@ -34,7 +34,7 @@ const Header = () => {
             Fale Conosco
           </Link>
           <Link
-            href="http://crm.zapbarbearia.com.br"
+            href="https://crm.zapbarbearia.com.br"
             className="text-lg font-medium text-white bg-primary-green hover:bg-secondary-green px-4 py-2 rounded-full transition"
           >
             Acessar Plataforma
