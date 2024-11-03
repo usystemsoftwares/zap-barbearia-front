@@ -16,7 +16,7 @@ const Home = () => {
       <Header />
       <main className="pt-20 md:pt-40">
         <div className="relative">
-          <div className="absolute aspect-square bottom-0 left-0  w-[75%] md:w-[60%] opacity-50">
+          <div className="absolute aspect-square bottom-0 left-0 w-[75%] md:w-[60%] opacity-50">
             <div className="absolute -bottom-[25%] md:-bottom-[35%] -left-[50%] w-full h-full [background-image:radial-gradient(circle,#42E0AF_0%,rgba(255,255,255,0)_75%)]"></div>
           </div>
           <HomeSection />
@@ -24,7 +24,6 @@ const Home = () => {
         <section className="w-container mx-auto relative overflow-hidden">
           <ServiceContainer />
         </section>
-        <div></div>
         <section
           className="w-container mx-auto relative overflow-hidden py-20 scroll-mt-10"
           id="funcionalidades"
@@ -40,9 +39,7 @@ const Home = () => {
         </TabProvider>
         <section className="bg-white py-28" id="faq">
           <div className="w-[min(90%,50rem)] mx-auto">
-            <p className="text-base font-light text-center">
-              FAQ ZAP BARBEARIA
-            </p>
+            <p className="text-base font-light text-center">FAQ ZAP BARBEARIA</p>
             <h2 className="text-2xl text-center md:text-5xl font-extrabold lg:text-6xl mt-[.625rem] mb-12">
               DÚVIDAS FREQUENTES
             </h2>
@@ -54,7 +51,7 @@ const Home = () => {
         <div className="w-[min(56.25rem,90%)] mx-auto">
           <div className="flex flex-col gap-12 md:gap-0 md:flex-row items-center md:items-start relative z-10">
             <div>
-              <Link className="block" href="#">
+              <Link href="#">
                 <Image src={WhiteLogo} alt="Home" />
               </Link>
             </div>
@@ -75,12 +72,27 @@ const Home = () => {
               </ul>
             </nav>
           </div>
-          <div className="my-14 bg-gradient-to-r from-cyan to-primary-green h-[.0625rem]"></div>
-          <p className="text-center z-10 relative">
-            Todos os direitos reservados.
-          </p>
+          <div className="my-14 bg-gradient-to-r from-cyan to-primary-green h-[0.0625rem]"></div>
+          <div className="flex flex-col items-center text-center space-y-4 relative z-20">
+            <p className="text-sm font-light text-secondary">
+              Usystem Desenvolvimento Ágil de Softwares LTDA
+            </p>
+            <p className="text-sm font-light text-secondary">CNPJ 36.648.450/0001-32</p>
+            <div className="flex gap-4 text-sm font-light relative z-20">
+              <Link href="/politica-de-privacidade" className="hover:underline">
+                Política de Privacidade
+              </Link>
+              <span>|</span>
+              <Link href="/termos-de-uso" className="hover:underline">
+                Termos de Uso
+              </Link>
+            </div>
+            <p className="text-xs font-light text-secondary mt-4">
+              © 2024 USystem | Todos os direitos reservados.
+            </p>
+          </div>
         </div>
-        <div className="absolute aspect-square w-[50rem] right-1/2 translate-x-1/2 bottom-[-90%] [background-image:radial-gradient(circle,rgba(77,208,128,1)_0%,rgba(255,255,255,0)_70%)] opacity-40"></div>
+        <div className="absolute aspect-square w-[50rem] right-1/2 translate-x-1/2 bottom-[-90%] [background-image:radial-gradient(circle,rgba(77,208,128,1)_0%,rgba(255,255,255,0)_70%)] opacity-40 z-0"></div>
       </footer>
     </>
   );
