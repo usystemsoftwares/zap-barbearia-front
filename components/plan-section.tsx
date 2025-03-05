@@ -321,7 +321,7 @@ const PlanList = () => {
         </ul>
         <Link
           className="relative inline-block border-2 py-2 text-center text-[1.625rem] font-semibold border-transparent w-[min(100%,14.375rem)] rounded-full bg-gradient-to-r from-primary-green to-cyan bg-clip-text text-transparent contract-button before:bg-gradient-to-r before:from-primary-green before:to-cyan"
-          href={""}
+          href={"https://crm.zapbarbearia.com.br/criar-minha-conta"}
         >
           Teste por 7 dias
         </Link>
