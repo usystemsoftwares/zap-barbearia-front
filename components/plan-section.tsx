@@ -184,7 +184,10 @@ const PlanList = () => {
           <div className="w-full h-[1px] bg-gradient-to-r from-primary-golden to-secondary-golden"></div>
 
           <p className="text-2xl sm:text-3xl lg:text-2xl xl:text-3xl bg-gradient-to-r from-primary-golden to-secondary-golden bg-clip-text text-transparent font-semibold text-center">
-            3 primeiros meses por apenas <strong>R$ 49,90</strong>
+            <strong>R$ 49,90</strong>
+            <span className="text-xl sm:text-2xl lg:text-xl xl:text-2xl">
+              /mês
+            </span>
           </p>
 
           <p className="text-lg text-center text-secondary-golden">
@@ -320,7 +323,7 @@ const PlanList = () => {
           className="relative inline-block border-2 py-2 text-center text-[1.625rem] font-semibold border-transparent w-[min(100%,14.375rem)] rounded-full bg-gradient-to-r from-primary-green to-cyan bg-clip-text text-transparent contract-button before:bg-gradient-to-r before:from-primary-green before:to-cyan"
           href={""}
         >
-          Contratar
+          Teste por 7 dias
         </Link>
       </li>
     </ul>
